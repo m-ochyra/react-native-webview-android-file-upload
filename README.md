@@ -20,7 +20,7 @@ What this module does:
 * adds support for sdk 26, using `FileProvider`;
 * adds runtime Camera Permissions (thanks [Pablo Navarro](https://github.com/Zjarr));
 
-It should work with React Native 0.50+, and reverts to the built-in WebView on iOS.
+It should work with React Native 0.43.4, and reverts to the built-in WebView on iOS.
 
 ![](https://github.com/andreipfeiffer/react-native-webview-android-file-upload/blob/master/docs/preview.gif)
 
@@ -113,11 +113,13 @@ NOTE: this is a requirement for `sdk 26`. This approach should NOT require you t
         ......
 
         <provider
+            tools:replace="android:authorities"
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
+                tools:replace="android:resource"
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_provider_paths" />
         </provider>
