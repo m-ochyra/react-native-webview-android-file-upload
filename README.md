@@ -27,7 +27,7 @@ It should work with React Native 0.43.4, and reverts to the built-in WebView on 
 # Installation
 
 ```bash
-npm install git+ssh://git@github.com:andreipfeiffer/react-native-webview-android-file-upload.git
+npm install git+https://github.com/m-ochyra/react-native-webview-android-file-upload.git
 ```
 
 ### Auto linking
